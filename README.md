@@ -20,7 +20,7 @@ PassMan is a minimalist, high-security password manager designed to protect your
 - **Password Strength Checker**
   - Analyses password strength in real-time.
   - Provides constructive feedback:
-    - *"Too short, like your last apology."*
+    - *"Too short, it's very vulnerable "*
     - *"Try adding numbers, symbols, and at least one capital letter."*
   - Recommends how to transform a weak password into something Fort Knox would blush at.
 
@@ -55,7 +55,7 @@ PassMan is a minimalist, high-security password manager designed to protect your
 3. Run PassMan:
 
    ```bash
-   python passman.py
+   python main.py
    ```
 
 4. Set your master password – this is the only password you’ll ever need to remember. Make it count.
