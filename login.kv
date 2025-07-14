@@ -1,0 +1,46 @@
+<LoginScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 50
+        spacing: 20
+        
+        Label:
+            id: title_label
+            text: "SecurePass"
+            font_size: 32
+            size_hint_y: 0.3
+            bold: True
+        
+        Label:
+            text: "Password Manager"
+            font_size: 18
+            size_hint_y: 0.2
+            color: 0.7, 0.7, 0.7, 1
+        
+        BoxLayout:
+            orientation: 'vertical'
+            spacing: 15
+            size_hint_y: 0.4
+            
+            TextInput:
+                id: password_input
+                hint_text: "Enter your master password"
+                password: True
+                multiline: False
+                size_hint_y: None
+                height: 40
+                on_text_validate: root.on_login_button_press()
+            
+            Button:
+                id: login_button
+                text: "Login"
+                size_hint_y: None
+                height: 50
+                background_color: 0.2, 0.6, 0.8, 1
+                on_press: root.on_login_button_press()
+        
+        Label:
+            text: "Your passwords are encrypted with AES-256 and protected by your master password"
+            font_size: 12
+            size_hint_y: 0.1
+            color: 0.5, 0.5, 0.5, 1

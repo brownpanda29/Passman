@@ -1,0 +1,118 @@
+<VaultScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 20
+        spacing: 10
+        
+        # Header
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: 50
+            
+            Label:
+                text: "SecurePass Vault"
+                font_size: 24
+                bold: True
+                size_hint_x: 0.8
+            
+            Button:
+                text: "Logout"
+                size_hint_x: 0.2
+                background_color: 0.8, 0.2, 0.2, 1
+                on_press: root.logout()
+        
+        # Add new password section
+        BoxLayout:
+            orientation: 'vertical'
+            spacing: 10
+            size_hint_y: None
+            height: 200
+            
+            Label:
+                text: "Add New Password"
+                font_size: 18
+                bold: True
+                size_hint_y: None
+                height: 30
+            
+            GridLayout:
+                cols: 2
+                spacing: 10
+                size_hint_y: None
+                height: 120
+                
+                Label:
+                    text: "Site:"
+                    size_hint_x: 0.3
+                TextInput:
+                    id: site_input
+                    hint_text: "e.g., gmail.com"
+                    multiline: False
+                
+                Label:
+                    text: "Username:"
+                    size_hint_x: 0.3
+                TextInput:
+                    id: username_input
+                    hint_text: "e.g., user@email.com"
+                    multiline: False
+                
+                Label:
+                    text: "Password:"
+                    size_hint_x: 0.3
+                TextInput:
+                    id: password_input
+                    hint_text: "Enter password or generate one"
+                    multiline: False
+            
+            BoxLayout:
+                orientation: 'horizontal'
+                spacing: 10
+                size_hint_y: None
+                height: 40
+                
+                Button:
+                    text: "Generate Password"
+                    size_hint_x: 0.33
+                    background_color: 0.6, 0.8, 0.2, 1
+                    on_press: root.generate_password_action()
+                
+                Button:
+                    text: "Check Strength"
+                    size_hint_x: 0.33
+                    background_color: 0.8, 0.6, 0.2, 1
+                    on_press: root.check_password_strength(root.ids.password_input.text)
+                
+                Button:
+                    text: "Save Password"
+                    size_hint_x: 0.34
+                    background_color: 0.2, 0.6, 0.8, 1
+                    on_press: root.save_password()
+        
+        # Separator
+        Widget:
+            size_hint_y: None
+            height: 2
+            canvas:
+                Color:
+                    rgb: 0.5, 0.5, 0.5
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+        
+        # Saved passwords section
+        Label:
+            text: "Saved Passwords"
+            font_size: 18
+            bold: True
+            size_hint_y: None
+            height: 30
+        
+        ScrollView:
+            BoxLayout:
+                id: password_list
+                orientation: 'vertical'
+                spacing: 5
+                size_hint_y: None
+                height: self.minimum_height
