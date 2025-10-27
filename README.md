@@ -109,7 +109,6 @@ passman/
 * Browser extension integration
 * Encrypted cloud backup (opt-in)
 
----
 
 
 ---
