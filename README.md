@@ -111,9 +111,6 @@ passman/
 
 ---
 
-## 👑 Credits
-
-Crafted by minds who understand security, not merely talk about it. This project is for people who actually *use* encryption, not just throw around buzzwords in coffee shops.
 
 ---
 
