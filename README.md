@@ -117,8 +117,6 @@ passman/
 
 MIT License. Because freedom should be free, but your passwords shouldn't.
 
-```
-
 ---
 
 
