@@ -121,6 +121,4 @@ MIT License. Because freedom should be free, but your passwords shouldn't.
 
 ---
 
-Should you desire a slightly more verbose or technical variant, or one tailored for a corporate GitLab deployment, I can whip that up faster than you can say "zero-knowledge architecture", sir.
-```
 
